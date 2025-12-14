@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace LaunchMissile
 {
-    class MissileStock<Tlaunch> where Tlaunch : ILaunchStrategy, new()
+    class MissileStock
     {
         private Stack<Missile> _stock;
         private readonly ILaunchStrategy _launchStrategy;
         public MissileStock(ILaunchStrategy Tlaunch)
         {
             _launchStrategy = Tlaunch;
-            _stock = new Stack<Tlaunch>;
+            _stock = new Stack<Missile>();
         }
         public void AddMissile() => _stock.Push(new Missile(_launchStrategy));
         public void AddMissiles(int amount) {

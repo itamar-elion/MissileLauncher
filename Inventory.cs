@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace LaunchMissile
 {
-    class S6ML
+    class Inventory
     {
+        Dictionary<string, MissileStock> _items = new();
+        public Inventory()
+        {
+
+        }
     }
 }

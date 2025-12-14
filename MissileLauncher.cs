@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace LaunchMissile
 {
-    class S6ML
+    class MissileLauncher
     {
+        public static bool Launch(Missile missile) => missile.Launch();
     }
 }

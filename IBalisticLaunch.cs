@@ -8,5 +8,6 @@ namespace LaunchMissile
 {
     interface IBalisticLaunch: ILaunchStrategy
     {
+
     }
 }
