@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace LaunchMissile
 {
-    interface ILaunchStrategy
+    public interface ILaunchStrategy
     {
-        public bool Launch();
+        public int SuccessRate { get; }
+        public bool Launch()
+        {
+            return (new Random().Next() % 100 > SuccessRate);
+        }
     }
 }

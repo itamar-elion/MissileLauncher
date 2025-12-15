@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace LaunchMissile
 {
-    interface ICruiseLaunch: ILaunchStrategy
+    class TorepedoLaunch: ILaunchStrategy
     {
+        public int SuccessRate { get; } = 100;
     }
 }

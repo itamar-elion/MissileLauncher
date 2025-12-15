@@ -7,31 +7,22 @@ using System.Threading.Tasks;
 
 namespace LaunchMissile
 {
-    class MissileStock<Tlaunch> where Tlaunch : ILaunchStrategy, new()
+    class MissileStock
     {
         private Stack<Missile> _stock;
         private readonly ILaunchStrategy _launchStrategy;
         public MissileStock(ILaunchStrategy Tlaunch)
         {
             _launchStrategy = Tlaunch;
-            _stock = new Stack<Tlaunch>;
+            _stock = new Stack<Missile>();
         }
-        public void AddMissile() => _stock.Push(new Missile(_launchStrategy));
         public void AddMissiles(int amount) {
             for (int i = 0; i < amount; i++) {
-                AddMissile();
+                _stock.Push(new Missile(_launchStrategy));
             }
-        }
-        public Missile UseMissile() {
-            if (_stock.Count > 0)
-            {
-                return _stock.Pop();
-            }
-            throw new InvalidOperationException();
         }
         public List<Missile> UseMissiles(int amount)
         {
-            if (_stock.Count < amount) throw new InvalidOperationException();
             List<Missile> missiles = new List<Missile>();
             for (int i = 0; i < amount; i++)
             {
@@ -39,5 +30,6 @@ namespace LaunchMissile
             }
             return missiles;
         }
+        public int Count() => _stock.Count;
     }
 }

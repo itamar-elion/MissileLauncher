@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LaunchMissile
+namespace LaunchMissile.MenuActions
 {
-    interface IBalisticLaunch: ILaunchStrategy
+    public class ShayetetMenu: MenuBuilder.BLL.Options.Menu
     {
     }
 }
