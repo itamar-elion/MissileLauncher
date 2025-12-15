@@ -17,4 +17,3 @@ namespace LaunchMissile.MenuActions
         }
     }
 }
-s
