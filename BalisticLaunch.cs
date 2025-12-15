@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace LaunchMissile
 {
-    class MissileLauncher
+    class BalisticLaunch: ILaunchStrategy
     {
-        public static bool Launch(Missile missile) => missile.Launch();
+        public int SuccessRate { get; } = 50;
     }
 }
