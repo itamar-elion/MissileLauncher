@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <Reference Include="MenuBuilder">
-      <HintPath>..\MenuBuilder\bin\Release\net6.0\MenuBuilder.dll</HintPath>
+      <HintPath>..\..\itamar-elion\MenuBuilder\bin\Release\net6.0\MenuBuilder.dll</HintPath>
     </Reference>
   </ItemGroup>
 
